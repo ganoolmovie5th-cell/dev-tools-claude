@@ -31,6 +31,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
         <link rel="icon" href="/favicon.ico" sizes="32x32" />
         <link rel="apple-touch-icon" href="/icon-192.svg" />
+        <link rel="alternate" type="application/rss+xml" title="DevKit Blog" href="/feed.xml" />
         {/* Google Analytics — replace G-XXXXXXXXXX with your Measurement ID */}
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX" />
         <script
