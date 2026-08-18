@@ -1,4 +1,6 @@
 <svg width="512" height="512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
   <rect width="512" height="512" rx="64" fill="#2563eb"/>
-  <text x="256" y="320" text-anchor="middle" font-family="system-ui,sans-serif" font-weight="bold" font-size="192" fill="white">DK</text>
+  <path d="M144 176l-64 80 64 80" stroke="white" stroke-width="36" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <path d="M368 176l64 80-64 80" stroke="white" stroke-width="36" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <path d="M304 128l-96 256" stroke="white" stroke-width="26" stroke-linecap="round" opacity="0.8"/>
 </svg>
