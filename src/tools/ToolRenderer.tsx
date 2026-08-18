@@ -41,6 +41,9 @@ const toolComponents: Record<string, React.ComponentType> = {
   'js-object-to-json': dynamic(() => import('./JsObjToJson')),
   'json-path-finder': dynamic(() => import('./JsonPathFinder')),
   'text-diff-word': dynamic(() => import('./TextDiffWord')),
+  'json-tree-viewer': dynamic(() => import('./JsonTreeViewer')),
+  'meta-tag-generator': dynamic(() => import('./MetaTagGenerator')),
+  'og-preview': dynamic(() => import('./OgPreview')),
 }
 
 export default function ToolRenderer({ slug }: { slug: string }) {
