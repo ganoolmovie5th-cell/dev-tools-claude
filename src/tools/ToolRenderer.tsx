@@ -25,6 +25,12 @@ const toolComponents: Record<string, React.ComponentType> = {
   'json-to-csv': dynamic(() => import('./JsonToCsv')),
   'qr-code-generator': dynamic(() => import('./QrCodeGenerator')),
   'slug-generator': dynamic(() => import('./SlugGenerator')),
+  'word-counter': dynamic(() => import('./WordCounter')),
+  'text-case-converter': dynamic(() => import('./TextCaseConverter')),
+  'json-to-typescript': dynamic(() => import('./JsonToTypescript')),
+  'image-to-base64': dynamic(() => import('./ImageToBase64')),
+  'tailwind-colors': dynamic(() => import('./TailwindColors')),
+  'chmod-calculator': dynamic(() => import('./ChmodCalculator')),
 }
 
 export default function ToolRenderer({ slug }: { slug: string }) {

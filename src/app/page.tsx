@@ -3,6 +3,7 @@
 import { useState } from 'react'
 import { tools } from '@/tools/registry'
 import ToolCard from '@/components/ToolCard'
+import FavoritesBar from '@/components/FavoritesBar'
 
 export default function HomePage() {
   const [search, setSearch] = useState('')
@@ -15,9 +16,11 @@ export default function HomePage() {
   return (
     <div>
       <section className="text-center mb-10">
-        <h1 className="text-3xl font-bold text-gray-900">Free Online Developer Tools</h1>
-        <p className="mt-2 text-gray-500">22+ tools that run entirely in your browser. No data sent to any server.</p>
+        <h1 className="text-3xl font-bold text-gray-900 dark:text-white">Free Online Developer Tools</h1>
+        <p className="mt-2 text-gray-500 dark:text-gray-400">28+ tools that run entirely in your browser. No data sent to any server.</p>
       </section>
+
+      <FavoritesBar />
 
       <div className="mb-8">
         <input
@@ -25,7 +28,7 @@ export default function HomePage() {
           placeholder="Search tools..."
           value={search}
           onChange={e => setSearch(e.target.value)}
-          className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+          className="w-full px-4 py-3 border border-gray-200 dark:border-gray-700 dark:bg-gray-800 dark:text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
         />
       </div>
 

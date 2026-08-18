@@ -29,6 +29,12 @@ export const tools: ToolMeta[] = [
   { slug: 'json-to-csv', name: 'JSON to CSV Converter', description: 'Convert JSON arrays to CSV format for spreadsheet use.', category: 'Converter', keywords: ['json to csv', 'json csv converter'] },
   { slug: 'qr-code-generator', name: 'QR Code Generator', description: 'Generate QR codes from any text or URL instantly.', category: 'Generator', keywords: ['qr code generator', 'free qr code'] },
   { slug: 'slug-generator', name: 'Slug Generator', description: 'Convert text to URL-friendly slugs for SEO-friendly URLs.', category: 'Generator', keywords: ['slug generator', 'url slug converter'] },
+  { slug: 'word-counter', name: 'Word Counter', description: 'Count words, characters, sentences, paragraphs, and estimate reading time.', category: 'Tester', keywords: ['word counter online', 'character counter'] },
+  { slug: 'text-case-converter', name: 'Text Case Converter', description: 'Convert text between camelCase, snake_case, kebab-case, PascalCase, and more.', category: 'Converter', keywords: ['text case converter', 'camelcase converter'] },
+  { slug: 'json-to-typescript', name: 'JSON to TypeScript', description: 'Generate TypeScript interfaces from JSON data automatically.', category: 'Generator', keywords: ['json to typescript', 'json to interface'] },
+  { slug: 'image-to-base64', name: 'Image to Base64', description: 'Convert images to Base64 data URI strings for embedding in code.', category: 'Converter', keywords: ['image to base64', 'image encoder'] },
+  { slug: 'tailwind-colors', name: 'Tailwind CSS Colors', description: 'Browse and copy all Tailwind CSS color palette values.', category: 'Reference', keywords: ['tailwind colors', 'tailwind color palette'] },
+  { slug: 'chmod-calculator', name: 'Chmod Calculator', description: 'Calculate Unix file permissions in octal and symbolic notation.', category: 'Calculator', keywords: ['chmod calculator', 'permission calculator'] },
 ]
 
 export function getToolBySlug(slug: string): ToolMeta | undefined {
