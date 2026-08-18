@@ -12,12 +12,12 @@ import { Analytics } from '@vercel/analytics/next'
 
 export const metadata: Metadata = {
   title: 'DevKit — Free Online Developer Tools',
-  description: 'Collection of 52+ free online developer tools: JSON formatter, Base64 encoder, UUID generator, regex tester, and more. All tools run client-side.',
-  metadataBase: new URL('https://devkit.web.id'),
+  description: 'Collection of 73+ free online developer tools: JSON formatter, Base64 encoder, UUID generator, regex tester, and more. All tools run client-side.',
+  metadataBase: new URL('https://www.devkit.web.id'),
   openGraph: {
     title: 'DevKit — Free Online Developer Tools',
-    description: '52+ free developer tools that run entirely in your browser.',
-    url: 'https://devkit.web.id',
+    description: '73+ free developer tools that run entirely in your browser.',
+    url: 'https://www.devkit.web.id',
     siteName: 'DevKit',
     type: 'website',
   },

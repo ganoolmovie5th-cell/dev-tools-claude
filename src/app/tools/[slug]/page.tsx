@@ -24,7 +24,7 @@ export function generateMetadata({ params }: { params: { slug: string } }): Meta
     openGraph: {
       title: `${tool.name} — Free Online Tool`,
       description: tool.description,
-      url: `https://devkit.web.id/tools/${tool.slug}/`,
+      url: `https://www.devkit.web.id/tools/${tool.slug}/`,
       siteName: 'DevKit',
       type: 'website',
     },
@@ -40,7 +40,7 @@ export default function ToolPage({ params }: { params: { slug: string } }) {
     '@type': 'WebApplication',
     name: tool.name,
     description: tool.description,
-    url: `https://devkit.web.id/tools/${tool.slug}/`,
+    url: `https://www.devkit.web.id/tools/${tool.slug}/`,
     applicationCategory: 'DeveloperApplication',
     operatingSystem: 'Any',
     offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },

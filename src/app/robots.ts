@@ -3,6 +3,6 @@ import { MetadataRoute } from 'next'
 export default function robots(): MetadataRoute.Robots {
   return {
     rules: { userAgent: '*', allow: '/' },
-    sitemap: 'https://devkit.web.id/sitemap.xml',
+    sitemap: 'https://www.devkit.web.id/sitemap.xml',
   }
 }

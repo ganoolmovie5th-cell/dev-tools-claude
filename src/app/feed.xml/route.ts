@@ -4,7 +4,7 @@ const posts = [
   { slug: 'web-security-encoding-guide', title: 'Web Security Encoding: Base64, URL, HTML Entities Explained', date: '2026-08-18', excerpt: 'Understand when and why to encode data for the web — preventing XSS, handling URLs safely, and embedding binary content.' },
 ]
 
-const BASE = 'https://devkit.web.id'
+const BASE = 'https://www.devkit.web.id'
 
 export async function GET() {
   const items = posts.map(p => `    <item>

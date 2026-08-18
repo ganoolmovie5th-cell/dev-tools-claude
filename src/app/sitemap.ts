@@ -1,7 +1,7 @@
 import { MetadataRoute } from 'next'
 import { tools } from '@/tools/registry'
 
-const BASE = 'https://devkit.web.id'
+const BASE = 'https://www.devkit.web.id'
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const toolPages = tools.map(t => ({
