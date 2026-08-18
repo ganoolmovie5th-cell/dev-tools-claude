@@ -31,6 +31,16 @@ const toolComponents: Record<string, React.ComponentType> = {
   'image-to-base64': dynamic(() => import('./ImageToBase64')),
   'tailwind-colors': dynamic(() => import('./TailwindColors')),
   'chmod-calculator': dynamic(() => import('./ChmodCalculator')),
+  'yaml-json': dynamic(() => import('./YamlJson')),
+  'csv-to-json': dynamic(() => import('./CsvToJson')),
+  'number-base-converter': dynamic(() => import('./NumberBaseConverter')),
+  'http-status-codes': dynamic(() => import('./HttpStatusCodes')),
+  'regex-escape': dynamic(() => import('./RegexEscape')),
+  'html-to-markdown': dynamic(() => import('./HtmlToMarkdown')),
+  'markdown-to-html': dynamic(() => import('./MarkdownToHtml')),
+  'js-object-to-json': dynamic(() => import('./JsObjToJson')),
+  'json-path-finder': dynamic(() => import('./JsonPathFinder')),
+  'text-diff-word': dynamic(() => import('./TextDiffWord')),
 }
 
 export default function ToolRenderer({ slug }: { slug: string }) {

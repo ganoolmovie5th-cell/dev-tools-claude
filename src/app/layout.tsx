@@ -3,15 +3,16 @@ import { Metadata } from 'next'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import ServiceWorker from '@/components/ServiceWorker'
-import KeyboardShortcuts from '@/components/KeyboardShortcuts'
+import CommandPalette from '@/components/CommandPalette'
+import { ToastProvider } from '@/components/Toast'
 
 export const metadata: Metadata = {
   title: 'DevKit — Free Online Developer Tools',
-  description: 'Collection of 28+ free online developer tools: JSON formatter, Base64 encoder, UUID generator, regex tester, and more. All tools run client-side.',
+  description: 'Collection of 38+ free online developer tools: JSON formatter, Base64 encoder, UUID generator, regex tester, and more. All tools run client-side.',
   metadataBase: new URL('https://devkit.web.id'),
   openGraph: {
     title: 'DevKit — Free Online Developer Tools',
-    description: '28+ free developer tools that run entirely in your browser.',
+    description: '38+ free developer tools that run entirely in your browser.',
     url: 'https://devkit.web.id',
     siteName: 'DevKit',
     type: 'website',
@@ -20,7 +21,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <head>
         <link rel="manifest" href="/manifest.json" />
         <meta name="theme-color" content="#2563eb" />
@@ -41,13 +42,15 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         />
       </head>
       <body className="min-h-screen flex flex-col bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100">
-        <Header />
-        <ServiceWorker />
-        <KeyboardShortcuts />
-        <main className="flex-1 max-w-6xl mx-auto w-full px-4 py-8">
-          {children}
-        </main>
-        <Footer />
+        <ToastProvider>
+          <Header />
+          <ServiceWorker />
+          <CommandPalette />
+          <main className="flex-1 max-w-6xl mx-auto w-full px-4 py-8">
+            {children}
+          </main>
+          <Footer />
+        </ToastProvider>
       </body>
     </html>
   )

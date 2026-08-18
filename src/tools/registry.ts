@@ -35,6 +35,16 @@ export const tools: ToolMeta[] = [
   { slug: 'image-to-base64', name: 'Image to Base64', description: 'Convert images to Base64 data URI strings for embedding in code.', category: 'Converter', keywords: ['image to base64', 'image encoder'] },
   { slug: 'tailwind-colors', name: 'Tailwind CSS Colors', description: 'Browse and copy all Tailwind CSS color palette values.', category: 'Reference', keywords: ['tailwind colors', 'tailwind color palette'] },
   { slug: 'chmod-calculator', name: 'Chmod Calculator', description: 'Calculate Unix file permissions in octal and symbolic notation.', category: 'Calculator', keywords: ['chmod calculator', 'permission calculator'] },
+  { slug: 'yaml-json', name: 'YAML ↔ JSON Converter', description: 'Convert between YAML and JSON formats instantly.', category: 'Converter', keywords: ['yaml to json', 'json to yaml'] },
+  { slug: 'csv-to-json', name: 'CSV to JSON', description: 'Convert CSV data to JSON array format.', category: 'Converter', keywords: ['csv to json', 'csv converter'] },
+  { slug: 'number-base-converter', name: 'Number Base Converter', description: 'Convert numbers between binary, octal, decimal, and hexadecimal.', category: 'Converter', keywords: ['binary to decimal', 'hex converter', 'number base converter'] },
+  { slug: 'http-status-codes', name: 'HTTP Status Codes', description: 'Searchable reference for all HTTP status codes with descriptions.', category: 'Reference', keywords: ['http status codes', 'http response codes'] },
+  { slug: 'regex-escape', name: 'Regex Escape', description: 'Escape special regex characters in a string for literal matching.', category: 'Encoder', keywords: ['regex escape online', 'escape regex characters'] },
+  { slug: 'html-to-markdown', name: 'HTML to Markdown', description: 'Convert HTML markup to clean Markdown syntax.', category: 'Converter', keywords: ['html to markdown', 'html to md'] },
+  { slug: 'markdown-to-html', name: 'Markdown to HTML', description: 'Convert Markdown text to HTML output.', category: 'Converter', keywords: ['markdown to html', 'md to html'] },
+  { slug: 'js-object-to-json', name: 'JS Object to JSON', description: 'Convert JavaScript object literals to valid JSON.', category: 'Converter', keywords: ['js object to json', 'javascript to json'] },
+  { slug: 'json-path-finder', name: 'JSON Path Finder', description: 'Explore JSON structure and find paths to every value.', category: 'Tester', keywords: ['json path finder', 'jsonpath online'] },
+  { slug: 'text-diff-word', name: 'Word-Level Diff', description: 'Compare texts and highlight differences at the word level.', category: 'Tester', keywords: ['word diff', 'word level comparison'] },
 ]
 
 export function getToolBySlug(slug: string): ToolMeta | undefined {
