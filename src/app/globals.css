@@ -19,3 +19,35 @@ textarea, input[type="text"], pre {
 .animate-fade-in {
   animation: fade-in 0.2s ease-out;
 }
+
+/* Print mode for cheat sheets */
+@media print {
+  header, footer, .no-print, [class*="CommandPalette"], [class*="KeyboardHelp"] {
+    display: none !important;
+  }
+  body {
+    background: white !important;
+    color: black !important;
+    font-size: 11pt;
+  }
+  main {
+    max-width: 100% !important;
+    padding: 0 !important;
+  }
+  table {
+    page-break-inside: avoid;
+  }
+  pre {
+    white-space: pre-wrap;
+    word-break: break-all;
+    border: 1px solid #ccc !important;
+  }
+}
+
+@keyframes confetti-fall {
+  0% { transform: translateY(-10px) rotate(0deg); opacity: 1; }
+  100% { transform: translateY(100vh) rotate(720deg); opacity: 0; }
+}
+.animate-confetti-fall {
+  animation: confetti-fall 2s ease-out forwards;
+}

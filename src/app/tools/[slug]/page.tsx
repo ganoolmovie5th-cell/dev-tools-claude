@@ -47,11 +47,37 @@ export default function ToolPage({ params }: { params: { slug: string } }) {
     browserRequirements: 'Requires JavaScript',
   }
 
+  const faqLd = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: [
+      {
+        '@type': 'Question',
+        name: `What is ${tool.name}?`,
+        acceptedAnswer: { '@type': 'Answer', text: tool.description },
+      },
+      {
+        '@type': 'Question',
+        name: `Is ${tool.name} free to use?`,
+        acceptedAnswer: { '@type': 'Answer', text: `Yes, ${tool.name} is completely free. All processing happens in your browser — no data is sent to any server.` },
+      },
+      {
+        '@type': 'Question',
+        name: `Is my data safe when using ${tool.name}?`,
+        acceptedAnswer: { '@type': 'Answer', text: 'Absolutely. All tools on DevKit run 100% client-side in your browser. Your data never leaves your device.' },
+      },
+    ],
+  }
+
   return (
     <div>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }}
       />
       <Breadcrumb items={[{ label: 'Tools', href: '/' }, { label: tool.name }]} />
       <AutoFocus />

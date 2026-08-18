@@ -5,6 +5,8 @@ import Footer from '@/components/Footer'
 import ServiceWorker from '@/components/ServiceWorker'
 import CommandPalette from '@/components/CommandPalette'
 import KeyboardHelp from '@/components/KeyboardHelp'
+import Onboarding from '@/components/Onboarding'
+import Confetti from '@/components/Confetti'
 import { ToastProvider } from '@/components/Toast'
 
 export const metadata: Metadata = {
@@ -53,6 +55,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <ServiceWorker />
           <CommandPalette />
           <KeyboardHelp />
+          <Onboarding />
+          <Confetti />
           <main className="flex-1 max-w-6xl mx-auto w-full px-4 py-8">
             {children}
           </main>

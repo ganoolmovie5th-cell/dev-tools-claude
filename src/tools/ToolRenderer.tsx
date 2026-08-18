@@ -55,6 +55,15 @@ const toolComponents: Record<string, React.ComponentType> = {
   'ip-info': dynamic(() => import('./IpInfo')),
   'code-to-image': dynamic(() => import('./CodeToImage')),
   'epoch-countdown': dynamic(() => import('./EpochCountdown')),
+  'box-shadow-generator': dynamic(() => import('./BoxShadowGenerator')),
+  'gradient-generator': dynamic(() => import('./GradientGenerator')),
+  'flexbox-generator': dynamic(() => import('./FlexboxGenerator')),
+  'env-to-json': dynamic(() => import('./EnvToJson')),
+  'text-to-binary': dynamic(() => import('./TextToBinary')),
+  'ascii-art-generator': dynamic(() => import('./AsciiArt')),
+  'docker-run-to-compose': dynamic(() => import('./DockerRunToCompose')),
+  'nginx-config-generator': dynamic(() => import('./NginxConfigGenerator')),
+  'sql-to-mongodb': dynamic(() => import('./SqlToMongo')),
 }
 
 export default function ToolRenderer({ slug }: { slug: string }) {

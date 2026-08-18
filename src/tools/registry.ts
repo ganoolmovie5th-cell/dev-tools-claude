@@ -59,6 +59,15 @@ export const tools: ToolMeta[] = [
   { slug: 'ip-info', name: 'IP Address Info', description: 'Show your current public IP address, location, ISP, and timezone.', category: 'Reference', keywords: ['what is my ip', 'ip address lookup', 'my ip'] },
   { slug: 'code-to-image', name: 'Code to Image', description: 'Turn code snippets into beautiful shareable PNG images.', category: 'Generator', keywords: ['code to image', 'code screenshot', 'carbon alternative'] },
   { slug: 'epoch-countdown', name: 'Epoch Countdown Timer', description: 'Live Unix epoch clock with countdown timer to any date.', category: 'Converter', keywords: ['epoch timer', 'countdown timer', 'unix clock'] },
+  { slug: 'box-shadow-generator', name: 'Box Shadow Generator', description: 'Generate CSS box-shadow with visual preview and live controls.', category: 'Generator', keywords: ['box shadow generator', 'css shadow generator'] },
+  { slug: 'gradient-generator', name: 'CSS Gradient Generator', description: 'Create linear and radial CSS gradients with color picker and angle control.', category: 'Generator', keywords: ['css gradient generator', 'gradient maker'] },
+  { slug: 'flexbox-generator', name: 'Flexbox Generator', description: 'Visual flexbox layout builder with live preview and CSS output.', category: 'Generator', keywords: ['flexbox generator', 'flex layout builder'] },
+  { slug: 'env-to-json', name: '.env ↔ JSON Converter', description: 'Convert between .env files and JSON format.', category: 'Converter', keywords: ['env to json', 'dotenv converter', 'json to env'] },
+  { slug: 'text-to-binary', name: 'Text to Binary', description: 'Convert text to binary representation and back.', category: 'Encoder', keywords: ['text to binary', 'binary converter', 'binary to text'] },
+  { slug: 'ascii-art-generator', name: 'ASCII Art Generator', description: 'Convert text into ASCII art using canvas rendering.', category: 'Generator', keywords: ['ascii art generator', 'text to ascii', 'ascii art'] },
+  { slug: 'docker-run-to-compose', name: 'Docker Run to Compose', description: 'Convert docker run commands to docker-compose.yml format.', category: 'Converter', keywords: ['docker run to compose', 'docker compose converter'] },
+  { slug: 'nginx-config-generator', name: 'Nginx Config Generator', description: 'Generate Nginx reverse proxy configs with SSL, gzip, and caching.', category: 'Generator', keywords: ['nginx config generator', 'nginx reverse proxy'] },
+  { slug: 'sql-to-mongodb', name: 'SQL to MongoDB', description: 'Convert SQL queries to MongoDB shell commands.', category: 'Converter', keywords: ['sql to mongodb', 'sql to mongo', 'mongo query converter'] },
 ]
 
 export function getToolBySlug(slug: string): ToolMeta | undefined {
