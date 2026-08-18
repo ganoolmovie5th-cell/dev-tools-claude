@@ -1,0 +1,21 @@
+import Link from 'next/link'
+
+interface ToolCardProps {
+  slug: string
+  name: string
+  description: string
+  category: string
+}
+
+export default function ToolCard({ slug, name, description, category }: ToolCardProps) {
+  return (
+    <Link
+      href={`/tools/${slug}`}
+      className="block p-5 border border-gray-200 rounded-lg hover:border-blue-300 hover:shadow-sm transition-all"
+    >
+      <span className="text-xs font-medium text-blue-600 uppercase tracking-wide">{category}</span>
+      <h3 className="mt-1 font-semibold text-gray-900">{name}</h3>
+      <p className="mt-1 text-sm text-gray-500">{description}</p>
+    </Link>
+  )
+}
