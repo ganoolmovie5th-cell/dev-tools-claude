@@ -1,0 +1,37 @@
+import { Metadata } from 'next'
+import Link from 'next/link'
+
+export const metadata: Metadata = {
+  title: 'Developer Comparisons — DevKit',
+  description: 'Side-by-side comparisons of encoding formats, data formats, and developer tools.',
+}
+
+const comparisons = [
+  { slug: 'json-vs-yaml', title: 'JSON vs YAML', description: 'When to use each data format for config, APIs, and data exchange.' },
+  { slug: 'base64-vs-url-encoding', title: 'Base64 vs URL Encoding', description: 'Two encoding methods for different transport needs.' },
+  { slug: 'md5-vs-sha256', title: 'MD5 vs SHA-256', description: 'Hash algorithm comparison for security and performance.' },
+  { slug: 'rest-vs-graphql', title: 'REST vs GraphQL', description: 'API design approaches — when each makes sense.' },
+  { slug: 'css-vs-tailwind', title: 'CSS vs Tailwind CSS', description: 'Vanilla CSS versus utility-first framework.' },
+]
+
+export default function ComparePage() {
+  return (
+    <div className="max-w-4xl mx-auto">
+      <h1 className="text-3xl font-bold text-gray-900 dark:text-white mb-2">Developer Comparisons</h1>
+      <p className="text-gray-500 dark:text-gray-400 mb-8">Side-by-side breakdowns to help you choose the right tool for the job.</p>
+
+      <div className="grid gap-4">
+        {comparisons.map(c => (
+          <Link
+            key={c.slug}
+            href={`/compare/${c.slug}`}
+            className="block p-5 border border-gray-200 dark:border-gray-700 rounded-lg hover:border-blue-300 dark:hover:border-blue-600 hover:shadow-sm transition-all"
+          >
+            <h2 className="font-semibold text-gray-900 dark:text-white">{c.title}</h2>
+            <p className="mt-1 text-sm text-gray-500 dark:text-gray-400">{c.description}</p>
+          </Link>
+        ))}
+      </div>
+    </div>
+  )
+}

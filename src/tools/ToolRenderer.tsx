@@ -44,6 +44,9 @@ const toolComponents: Record<string, React.ComponentType> = {
   'json-tree-viewer': dynamic(() => import('./JsonTreeViewer')),
   'meta-tag-generator': dynamic(() => import('./MetaTagGenerator')),
   'og-preview': dynamic(() => import('./OgPreview')),
+  'svg-to-css': dynamic(() => import('./SvgToCss')),
+  'tailwind-to-css': dynamic(() => import('./TailwindToCss')),
+  'favicon-generator': dynamic(() => import('./FaviconGenerator')),
 }
 
 export default function ToolRenderer({ slug }: { slug: string }) {

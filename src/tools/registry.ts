@@ -48,6 +48,9 @@ export const tools: ToolMeta[] = [
   { slug: 'json-tree-viewer', name: 'JSON Tree Viewer', description: 'Visualize JSON data as an interactive collapsible tree.', category: 'Formatter', keywords: ['json viewer', 'json tree', 'json explorer'] },
   { slug: 'meta-tag-generator', name: 'Meta Tag Generator', description: 'Generate HTML meta tags, Open Graph, and Twitter Card tags for SEO.', category: 'Generator', keywords: ['meta tag generator', 'og tag generator', 'seo tags'] },
   { slug: 'og-preview', name: 'Open Graph Preview', description: 'Preview how your page looks when shared on Facebook, LinkedIn, and X.', category: 'Tester', keywords: ['og preview', 'open graph preview', 'social share preview'] },
+  { slug: 'svg-to-css', name: 'SVG to CSS Background', description: 'Convert SVG code to a CSS background-image data URI.', category: 'Converter', keywords: ['svg to css', 'svg background css', 'svg data uri'] },
+  { slug: 'tailwind-to-css', name: 'Tailwind to CSS', description: 'Convert Tailwind CSS utility classes to plain CSS properties.', category: 'Converter', keywords: ['tailwind to css', 'tailwind converter'] },
+  { slug: 'favicon-generator', name: 'Favicon Generator', description: 'Generate favicon PNG files from text or emoji with custom colors.', category: 'Generator', keywords: ['favicon generator', 'favicon from text', 'emoji favicon'] },
 ]
 
 export function getToolBySlug(slug: string): ToolMeta | undefined {

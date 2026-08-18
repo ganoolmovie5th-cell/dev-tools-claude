@@ -6,6 +6,7 @@ import RelatedTools from '@/components/RelatedTools'
 import ToolPageClient from '@/components/ToolPageClient'
 import OutputHistory from '@/components/OutputHistory'
 import EmbedWidget from '@/components/EmbedWidget'
+import ToolRating from '@/components/ToolRating'
 
 export function generateStaticParams() {
   return tools.map(t => ({ slug: t.slug }))
@@ -60,6 +61,7 @@ export default function ToolPage({ params }: { params: { slug: string } }) {
       </div>
       <ToolRenderer slug={tool.slug} />
       <OutputHistory toolSlug={tool.slug} />
+      <ToolRating slug={tool.slug} />
       <EmbedWidget slug={tool.slug} name={tool.name} />
       <RelatedTools current={tool.slug} />
     </div>
