@@ -1,22 +1,49 @@
+'use client'
+
 import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 import { tools } from '@/tools/registry'
 
+function fuzzyMatch(path: string) {
+  const slug = path.split('/').pop()?.replace(/[^a-z0-9-]/g, '') || ''
+  if (!slug) return []
+
+  return tools
+    .map(t => {
+      const score =
+        (t.slug.includes(slug) ? 3 : 0) +
+        (slug.includes(t.slug) ? 3 : 0) +
+        (t.name.toLowerCase().includes(slug) ? 2 : 0) +
+        t.keywords.filter(k => k.includes(slug) || slug.includes(k.split(' ')[0])).length
+      return { ...t, score }
+    })
+    .filter(t => t.score > 0)
+    .sort((a, b) => b.score - a.score)
+    .slice(0, 4)
+}
+
 export default function NotFound() {
-  // Pick 6 popular tools to suggest
-  const suggested = tools.filter(t =>
+  const pathname = usePathname()
+  const suggestions = fuzzyMatch(pathname)
+
+  const fallback = tools.filter(t =>
     ['json-formatter', 'base64-encode-decode', 'uuid-generator', 'regex-tester', 'password-generator', 'hash-generator'].includes(t.slug)
   )
+
+  const displayed = suggestions.length > 0 ? suggestions : fallback.slice(0, 4)
 
   return (
     <div className="max-w-2xl mx-auto text-center py-16">
       <h1 className="text-6xl font-bold text-blue-600 mb-4">404</h1>
       <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-2">Page Not Found</h2>
       <p className="text-gray-500 dark:text-gray-400 mb-8">
-        The page you&apos;re looking for doesn&apos;t exist. Try one of these tools instead:
+        {suggestions.length > 0
+          ? 'Did you mean one of these?'
+          : "The page you're looking for doesn't exist. Try one of these tools:"}
       </p>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-8 text-left">
-        {suggested.map(t => (
+        {displayed.map(t => (
           <Link
             key={t.slug}
             href={`/tools/${t.slug}`}

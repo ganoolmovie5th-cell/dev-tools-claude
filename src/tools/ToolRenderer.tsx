@@ -47,6 +47,14 @@ const toolComponents: Record<string, React.ComponentType> = {
   'svg-to-css': dynamic(() => import('./SvgToCss')),
   'tailwind-to-css': dynamic(() => import('./TailwindToCss')),
   'favicon-generator': dynamic(() => import('./FaviconGenerator')),
+  'jwt-generator': dynamic(() => import('./JwtGenerator')),
+  'user-agent-parser': dynamic(() => import('./UserAgentParser')),
+  'placeholder-image': dynamic(() => import('./PlaceholderImage')),
+  'bcrypt-generator': dynamic(() => import('./BcryptGenerator')),
+  'toml-to-json': dynamic(() => import('./TomlToJson')),
+  'ip-info': dynamic(() => import('./IpInfo')),
+  'code-to-image': dynamic(() => import('./CodeToImage')),
+  'epoch-countdown': dynamic(() => import('./EpochCountdown')),
 }
 
 export default function ToolRenderer({ slug }: { slug: string }) {

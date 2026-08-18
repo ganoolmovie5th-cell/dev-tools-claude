@@ -51,6 +51,14 @@ export const tools: ToolMeta[] = [
   { slug: 'svg-to-css', name: 'SVG to CSS Background', description: 'Convert SVG code to a CSS background-image data URI.', category: 'Converter', keywords: ['svg to css', 'svg background css', 'svg data uri'] },
   { slug: 'tailwind-to-css', name: 'Tailwind to CSS', description: 'Convert Tailwind CSS utility classes to plain CSS properties.', category: 'Converter', keywords: ['tailwind to css', 'tailwind converter'] },
   { slug: 'favicon-generator', name: 'Favicon Generator', description: 'Generate favicon PNG files from text or emoji with custom colors.', category: 'Generator', keywords: ['favicon generator', 'favicon from text', 'emoji favicon'] },
+  { slug: 'jwt-generator', name: 'JWT Generator', description: 'Generate JWT tokens with custom header and payload for testing.', category: 'Generator', keywords: ['jwt generator', 'jwt token generator', 'create jwt'] },
+  { slug: 'user-agent-parser', name: 'User Agent Parser', description: 'Parse user agent strings to detect browser, OS, and device type.', category: 'Tester', keywords: ['user agent parser', 'ua parser', 'detect browser'] },
+  { slug: 'placeholder-image', name: 'Placeholder Image Generator', description: 'Generate custom placeholder images with specified dimensions and colors.', category: 'Generator', keywords: ['placeholder image', 'dummy image generator'] },
+  { slug: 'bcrypt-generator', name: 'Bcrypt Hash Generator', description: 'Generate bcrypt-format password hashes with configurable rounds.', category: 'Crypto', keywords: ['bcrypt generator', 'bcrypt hash online', 'password hash'] },
+  { slug: 'toml-to-json', name: 'TOML to JSON', description: 'Convert TOML configuration files to JSON format.', category: 'Converter', keywords: ['toml to json', 'toml converter', 'toml parser'] },
+  { slug: 'ip-info', name: 'IP Address Info', description: 'Show your current public IP address, location, ISP, and timezone.', category: 'Reference', keywords: ['what is my ip', 'ip address lookup', 'my ip'] },
+  { slug: 'code-to-image', name: 'Code to Image', description: 'Turn code snippets into beautiful shareable PNG images.', category: 'Generator', keywords: ['code to image', 'code screenshot', 'carbon alternative'] },
+  { slug: 'epoch-countdown', name: 'Epoch Countdown Timer', description: 'Live Unix epoch clock with countdown timer to any date.', category: 'Converter', keywords: ['epoch timer', 'countdown timer', 'unix clock'] },
 ]
 
 export function getToolBySlug(slug: string): ToolMeta | undefined {

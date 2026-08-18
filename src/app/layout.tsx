@@ -4,15 +4,16 @@ import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import ServiceWorker from '@/components/ServiceWorker'
 import CommandPalette from '@/components/CommandPalette'
+import KeyboardHelp from '@/components/KeyboardHelp'
 import { ToastProvider } from '@/components/Toast'
 
 export const metadata: Metadata = {
   title: 'DevKit — Free Online Developer Tools',
-  description: 'Collection of 38+ free online developer tools: JSON formatter, Base64 encoder, UUID generator, regex tester, and more. All tools run client-side.',
+  description: 'Collection of 52+ free online developer tools: JSON formatter, Base64 encoder, UUID generator, regex tester, and more. All tools run client-side.',
   metadataBase: new URL('https://devkit.web.id'),
   openGraph: {
     title: 'DevKit — Free Online Developer Tools',
-    description: '38+ free developer tools that run entirely in your browser.',
+    description: '52+ free developer tools that run entirely in your browser.',
     url: 'https://devkit.web.id',
     siteName: 'DevKit',
     type: 'website',
@@ -35,6 +36,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             __html: `window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-XXXXXXXXXX');`,
           }}
         />
+        {/* Vercel Analytics */}
+        <script
+          defer
+          src="/_vercel/insights/script.js"
+        />
         <script
           async
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXX"
@@ -46,6 +52,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <Header />
           <ServiceWorker />
           <CommandPalette />
+          <KeyboardHelp />
           <main className="flex-1 max-w-6xl mx-auto w-full px-4 py-8">
             {children}
           </main>

@@ -7,6 +7,8 @@ import ToolPageClient from '@/components/ToolPageClient'
 import OutputHistory from '@/components/OutputHistory'
 import EmbedWidget from '@/components/EmbedWidget'
 import ToolRating from '@/components/ToolRating'
+import Breadcrumb from '@/components/Breadcrumb'
+import AutoFocus from '@/components/AutoFocus'
 
 export function generateStaticParams() {
   return tools.map(t => ({ slug: t.slug }))
@@ -51,6 +53,8 @@ export default function ToolPage({ params }: { params: { slug: string } }) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
+      <Breadcrumb items={[{ label: 'Tools', href: '/' }, { label: tool.name }]} />
+      <AutoFocus />
       <div className="mb-6 flex items-start justify-between">
         <div>
           <span className="text-xs font-medium text-blue-600 uppercase tracking-wide">{tool.category}</span>
