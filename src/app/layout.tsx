@@ -8,6 +8,7 @@ import KeyboardHelp from '@/components/KeyboardHelp'
 import Onboarding from '@/components/Onboarding'
 import Confetti from '@/components/Confetti'
 import { ToastProvider } from '@/components/Toast'
+import { Analytics } from '@vercel/analytics/next'
 
 export const metadata: Metadata = {
   title: 'DevKit — Free Online Developer Tools',
@@ -63,6 +64,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           </main>
           <Footer />
         </ToastProvider>
+        <Analytics />
       </body>
     </html>
   )
