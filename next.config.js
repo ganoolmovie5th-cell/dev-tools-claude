@@ -2,7 +2,6 @@
 const nextConfig = {
   output: 'export',
   images: { unoptimized: true },
-  basePath: '/dev-tools-claude',
   trailingSlash: true,
 }
 
