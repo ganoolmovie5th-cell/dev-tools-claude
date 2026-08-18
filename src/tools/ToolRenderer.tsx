@@ -66,6 +66,15 @@ const toolComponents: Record<string, React.ComponentType> = {
   'sql-to-mongodb': dynamic(() => import('./SqlToMongo')),
   'dns-lookup': dynamic(() => import('./DnsLookup')),
   'ssl-checker': dynamic(() => import('./SslChecker')),
+  'ip-subnet-calculator': dynamic(() => import('./IpSubnetCalc')),
+  'robots-txt-generator': dynamic(() => import('./RobotsTxtGenerator')),
+  'color-palette-generator': dynamic(() => import('./ColorPaletteGenerator')),
+  'border-radius-visualizer': dynamic(() => import('./BorderRadiusVisualizer')),
+  'xml-formatter': dynamic(() => import('./XmlFormatter')),
+  'pomodoro-timer': dynamic(() => import('./PomodoroTimer')),
+  'typing-speed-test': dynamic(() => import('./TypingSpeedTest')),
+  'barcode-generator': dynamic(() => import('./BarcodeGenerator')),
+  'csp-header-builder': dynamic(() => import('./CspBuilder')),
 }
 
 export default function ToolRenderer({ slug }: { slug: string }) {

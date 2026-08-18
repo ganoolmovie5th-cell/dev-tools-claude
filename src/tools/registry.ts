@@ -70,6 +70,15 @@ export const tools: ToolMeta[] = [
   { slug: 'sql-to-mongodb', name: 'SQL to MongoDB', description: 'Convert SQL queries to MongoDB shell commands.', category: 'Converter', keywords: ['sql to mongodb', 'sql to mongo', 'mongo query converter'] },
   { slug: 'dns-lookup', name: 'DNS Lookup', description: 'Query DNS records (A, AAAA, MX, NS, TXT, CNAME) for any domain.', category: 'Reference', keywords: ['dns lookup', 'dns checker', 'domain dns records'] },
   { slug: 'ssl-checker', name: 'SSL Certificate Checker', description: 'Check SSL certificate validity, issuer, expiration, and protocol for any domain.', category: 'Tester', keywords: ['ssl checker', 'ssl certificate check', 'https checker'] },
+  { slug: 'ip-subnet-calculator', name: 'IP Subnet Calculator', description: 'Calculate network address, broadcast, host range, and subnet mask from CIDR notation.', category: 'Calculator', keywords: ['subnet calculator', 'ip calculator', 'cidr calculator'] },
+  { slug: 'robots-txt-generator', name: 'Robots.txt Generator', description: 'Generate robots.txt files with custom user-agent rules and sitemap URL.', category: 'Generator', keywords: ['robots.txt generator', 'robots txt maker'] },
+  { slug: 'color-palette-generator', name: 'Color Palette Generator', description: 'Generate harmonious color palettes using color theory (analogous, complementary, triadic).', category: 'Generator', keywords: ['color palette generator', 'color scheme generator'] },
+  { slug: 'border-radius-visualizer', name: 'Border Radius Visualizer', description: 'Visualize and generate CSS border-radius with individual corner controls.', category: 'Generator', keywords: ['border radius generator', 'css border radius'] },
+  { slug: 'xml-formatter', name: 'XML Formatter', description: 'Format and minify XML documents with proper indentation.', category: 'Formatter', keywords: ['xml formatter', 'xml beautifier', 'xml pretty print'] },
+  { slug: 'pomodoro-timer', name: 'Pomodoro Timer', description: 'Focus timer with 25-minute work sessions and 5-minute breaks.', category: 'Productivity', keywords: ['pomodoro timer', 'focus timer', 'work timer'] },
+  { slug: 'typing-speed-test', name: 'Typing Speed Test', description: 'Test your typing speed (WPM) and accuracy with random programming quotes.', category: 'Tester', keywords: ['typing speed test', 'wpm test', 'typing test'] },
+  { slug: 'barcode-generator', name: 'Barcode Generator', description: 'Generate barcode images from text with download option.', category: 'Generator', keywords: ['barcode generator', 'barcode maker'] },
+  { slug: 'csp-header-builder', name: 'CSP Header Builder', description: 'Build Content-Security-Policy headers with visual directive editor.', category: 'Generator', keywords: ['csp generator', 'content security policy builder'] },
 ]
 
 export function getToolBySlug(slug: string): ToolMeta | undefined {
