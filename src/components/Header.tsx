@@ -13,6 +13,7 @@ export default function Header() {
         <div className="flex items-center gap-3">
           <nav className="flex gap-4 text-sm text-gray-600 dark:text-gray-400">
             <Link href="/" className="hover:text-gray-900 dark:hover:text-white">Tools</Link>
+            <Link href="/cheatsheets" className="hover:text-gray-900 dark:hover:text-white">Cheatsheets</Link>
             <Link href="/about" className="hover:text-gray-900 dark:hover:text-white">About</Link>
           </nav>
           <ThemeToggle />

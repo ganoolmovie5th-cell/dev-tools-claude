@@ -4,6 +4,7 @@ import { notFound } from 'next/navigation'
 import ToolRenderer from '@/tools/ToolRenderer'
 import RelatedTools from '@/components/RelatedTools'
 import ToolPageClient from '@/components/ToolPageClient'
+import OutputHistory from '@/components/OutputHistory'
 
 export function generateStaticParams() {
   return tools.map(t => ({ slug: t.slug }))
@@ -13,7 +14,7 @@ export function generateMetadata({ params }: { params: { slug: string } }): Meta
   const tool = getToolBySlug(params.slug)
   if (!tool) return {}
   return {
-    title: `${tool.name} — Free Online Tool | DevToolkit`,
+    title: `${tool.name} — Free Online Tool | DevKit`,
     description: tool.description,
     keywords: tool.keywords.join(', '),
   }
@@ -34,6 +35,7 @@ export default function ToolPage({ params }: { params: { slug: string } }) {
         <ToolPageClient slug={tool.slug} />
       </div>
       <ToolRenderer slug={tool.slug} />
+      <OutputHistory toolSlug={tool.slug} />
       <RelatedTools current={tool.slug} />
     </div>
   )
