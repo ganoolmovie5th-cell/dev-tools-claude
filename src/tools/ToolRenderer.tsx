@@ -64,6 +64,8 @@ const toolComponents: Record<string, React.ComponentType> = {
   'docker-run-to-compose': dynamic(() => import('./DockerRunToCompose')),
   'nginx-config-generator': dynamic(() => import('./NginxConfigGenerator')),
   'sql-to-mongodb': dynamic(() => import('./SqlToMongo')),
+  'dns-lookup': dynamic(() => import('./DnsLookup')),
+  'ssl-checker': dynamic(() => import('./SslChecker')),
 }
 
 export default function ToolRenderer({ slug }: { slug: string }) {

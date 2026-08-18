@@ -68,6 +68,8 @@ export const tools: ToolMeta[] = [
   { slug: 'docker-run-to-compose', name: 'Docker Run to Compose', description: 'Convert docker run commands to docker-compose.yml format.', category: 'Converter', keywords: ['docker run to compose', 'docker compose converter'] },
   { slug: 'nginx-config-generator', name: 'Nginx Config Generator', description: 'Generate Nginx reverse proxy configs with SSL, gzip, and caching.', category: 'Generator', keywords: ['nginx config generator', 'nginx reverse proxy'] },
   { slug: 'sql-to-mongodb', name: 'SQL to MongoDB', description: 'Convert SQL queries to MongoDB shell commands.', category: 'Converter', keywords: ['sql to mongodb', 'sql to mongo', 'mongo query converter'] },
+  { slug: 'dns-lookup', name: 'DNS Lookup', description: 'Query DNS records (A, AAAA, MX, NS, TXT, CNAME) for any domain.', category: 'Reference', keywords: ['dns lookup', 'dns checker', 'domain dns records'] },
+  { slug: 'ssl-checker', name: 'SSL Certificate Checker', description: 'Check SSL certificate validity, issuer, expiration, and protocol for any domain.', category: 'Tester', keywords: ['ssl checker', 'ssl certificate check', 'https checker'] },
 ]
 
 export function getToolBySlug(slug: string): ToolMeta | undefined {
