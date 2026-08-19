@@ -52,6 +52,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7759392165776614"
           crossOrigin="anonymous"
         />
+        {/* AdSense Ad Blocker Recovery */}
+        <script async src="https://fundingchoicesmessages.google.com/i/pub-7759392165776614?ers=1" />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(function(){function signalGooglefcPresent(){if(!window.frames['googlefcPresent']){if(document.body){const iframe=document.createElement('iframe');iframe.style='width:0;height:0;border:none;z-index:-1000;left:-1000px;top:-1000px;';iframe.style.display='none';iframe.name='googlefcPresent';document.body.appendChild(iframe);}else{setTimeout(signalGooglefcPresent,0);}}}signalGooglefcPresent();})();`,
+          }}
+        />
       </head>
       <body className="min-h-screen flex flex-col bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100">
         {/* Google Tag Manager (noscript) */}
