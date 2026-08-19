@@ -27,10 +27,39 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
   }))
 
+  const blogPosts = [
+    'mastering-json-formatting', 'regex-guide-for-developers', 'web-security-encoding-guide',
+    'jwt-tokens-explained', 'docker-compose-beginners-guide', 'css-generators-every-developer-needs',
+  ].map(slug => ({
+    url: `${BASE}/blog/${slug}/`,
+    lastModified: new Date(),
+    changeFrequency: 'monthly' as const,
+    priority: 0.7,
+  }))
+
+  const comparePages = [
+    'json-vs-yaml', 'base64-vs-url-encoding', 'md5-vs-sha256',
+    'rest-vs-graphql', 'css-vs-tailwind', 'devkit-vs-transform-tools', 'devkit-vs-cyberchef',
+  ].map(slug => ({
+    url: `${BASE}/compare/${slug}/`,
+    lastModified: new Date(),
+    changeFrequency: 'monthly' as const,
+    priority: 0.6,
+  }))
+
   return [
     { url: `${BASE}/`, lastModified: new Date(), changeFrequency: 'weekly', priority: 1 },
+    { url: `${BASE}/blog/`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.7 },
+    ...blogPosts,
+    { url: `${BASE}/compare/`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.7 },
+    ...comparePages,
     { url: `${BASE}/cheatsheets/`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.7 },
     ...cheatsheets,
+    { url: `${BASE}/bundles/`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.6 },
+    { url: `${BASE}/workspace/`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.5 },
+    { url: `${BASE}/compare-tools/`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.5 },
+    { url: `${BASE}/api-docs/`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.5 },
+    { url: `${BASE}/contribute/`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.5 },
     { url: `${BASE}/changelog/`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.5 },
     { url: `${BASE}/pro/`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.5 },
     { url: `${BASE}/resources/`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.5 },
