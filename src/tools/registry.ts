@@ -82,6 +82,10 @@ export const tools: ToolMeta[] = [
   { slug: 'markdown-table-generator', name: 'Markdown Table Generator', description: 'Build Markdown tables visually with alignment controls and instant output.', category: 'Generator', keywords: ['markdown table generator', 'md table maker'] },
   { slug: 'json-schema-validator', name: 'JSON Schema Validator', description: 'Validate JSON data against a JSON Schema with detailed error reporting.', category: 'Tester', keywords: ['json schema validator', 'json schema check'] },
   { slug: 'curl-to-code', name: 'cURL to Code', description: 'Convert cURL commands to JavaScript, Python, or PHP code.', category: 'Converter', keywords: ['curl to code', 'curl to python', 'curl to javascript'] },
+  { slug: 'markdown-toc-generator', name: 'Markdown TOC Generator', description: 'Generate a table of contents from Markdown headings automatically.', category: 'Generator', keywords: ['markdown toc generator', 'table of contents generator'] },
+  { slug: 'jwt-expiry-checker', name: 'JWT Expiry Checker', description: 'Check if a JWT token is expired and show remaining time until expiration.', category: 'Tester', keywords: ['jwt expiry checker', 'jwt token expired', 'check jwt expiration'] },
+  { slug: 'html-minifier', name: 'HTML Minifier', description: 'Minify HTML by removing comments, whitespace, and redundant attributes.', category: 'Minifier', keywords: ['html minifier', 'html compressor'] },
+  { slug: 'js-beautifier', name: 'JavaScript Beautifier', description: 'Beautify and format minified JavaScript code with proper indentation.', category: 'Formatter', keywords: ['js beautifier', 'javascript formatter', 'js pretty print'] },
 ]
 
 export function getToolBySlug(slug: string): ToolMeta | undefined {

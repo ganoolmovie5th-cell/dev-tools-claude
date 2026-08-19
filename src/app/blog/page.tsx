@@ -7,6 +7,9 @@ export const metadata: Metadata = {
 }
 
 const posts = [
+  { slug: 'jwt-tokens-explained', title: 'JWT Tokens Explained: Decode, Validate, and Debug', date: '2026-08-19', readTime: '8 min', excerpt: 'Understand JSON Web Tokens from structure to security. Decode, check expiry, spot mistakes, and debug authentication.' },
+  { slug: 'docker-compose-beginners-guide', title: 'Docker Compose for Beginners: From docker run to YAML', date: '2026-08-19', readTime: '7 min', excerpt: 'Convert messy docker run commands into clean, version-controlled docker-compose.yml files.' },
+  { slug: 'css-generators-every-developer-needs', title: '5 CSS Generators Every Frontend Developer Needs', date: '2026-08-19', readTime: '5 min', excerpt: 'Stop guessing CSS values. Use visual generators for shadows, gradients, flexbox, and more.' },
   { slug: 'mastering-json-formatting', title: 'Mastering JSON: Format, Validate, and Debug Like a Pro', date: '2026-08-18', readTime: '6 min', excerpt: 'Learn how to work with JSON effectively — from formatting messy API responses to catching subtle validation errors that break your applications.' },
   { slug: 'regex-guide-for-developers', title: 'Regex for Developers: From Zero to Pattern Matching Hero', date: '2026-08-18', readTime: '8 min', excerpt: 'A practical guide to regular expressions covering character classes, quantifiers, lookaheads, and real-world patterns you will actually use.' },
   { slug: 'web-security-encoding-guide', title: 'Web Security Encoding: Base64, URL, HTML Entities Explained', date: '2026-08-18', readTime: '7 min', excerpt: 'Understand when and why to encode data for the web — preventing XSS, handling URLs safely, and embedding binary content in text formats.' },

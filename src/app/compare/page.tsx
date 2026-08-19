@@ -12,6 +12,8 @@ const comparisons = [
   { slug: 'md5-vs-sha256', title: 'MD5 vs SHA-256', description: 'Hash algorithm comparison for security and performance.' },
   { slug: 'rest-vs-graphql', title: 'REST vs GraphQL', description: 'API design approaches — when each makes sense.' },
   { slug: 'css-vs-tailwind', title: 'CSS vs Tailwind CSS', description: 'Vanilla CSS versus utility-first framework.' },
+  { slug: 'devkit-vs-transform-tools', title: 'DevKit vs Transform.tools', description: 'Feature-by-feature comparison of two developer toolkits.' },
+  { slug: 'devkit-vs-cyberchef', title: 'DevKit vs CyberChef', description: 'When to use each: daily dev tasks vs complex data pipelines.' },
 ]
 
 export default function ComparePage() {

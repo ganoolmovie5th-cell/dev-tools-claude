@@ -78,6 +78,10 @@ const toolComponents: Record<string, React.ComponentType> = {
   'markdown-table-generator': dynamic(() => import('./MarkdownTableGenerator')),
   'json-schema-validator': dynamic(() => import('./JsonSchemaValidator')),
   'curl-to-code': dynamic(() => import('./CurlToCode')),
+  'markdown-toc-generator': dynamic(() => import('./MarkdownTocGenerator')),
+  'jwt-expiry-checker': dynamic(() => import('./JwtExpiryChecker')),
+  'html-minifier': dynamic(() => import('./HtmlMinifier')),
+  'js-beautifier': dynamic(() => import('./JsBeautifier')),
 }
 
 export default function ToolRenderer({ slug }: { slug: string }) {
