@@ -1,6 +1,8 @@
 import { MetadataRoute } from 'next'
 import { tools } from '@/tools/registry'
 
+export const dynamic = 'force-static'
+
 const BASE = 'https://www.devkit.web.id'
 
 export default function sitemap(): MetadataRoute.Sitemap {

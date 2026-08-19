@@ -1,3 +1,5 @@
+export const dynamic = 'force-static'
+
 const posts = [
   { slug: 'mastering-json-formatting', title: 'Mastering JSON: Format, Validate, and Debug Like a Pro', date: '2026-08-18', excerpt: 'Learn how to work with JSON effectively — from formatting messy API responses to catching subtle validation errors.' },
   { slug: 'regex-guide-for-developers', title: 'Regex for Developers: From Zero to Pattern Matching Hero', date: '2026-08-18', excerpt: 'A practical guide to regular expressions covering character classes, quantifiers, lookaheads, and real-world patterns.' },
