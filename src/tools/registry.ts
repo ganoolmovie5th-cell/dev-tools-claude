@@ -79,6 +79,9 @@ export const tools: ToolMeta[] = [
   { slug: 'typing-speed-test', name: 'Typing Speed Test', description: 'Test your typing speed (WPM) and accuracy with random programming quotes.', category: 'Tester', keywords: ['typing speed test', 'wpm test', 'typing test'] },
   { slug: 'barcode-generator', name: 'Barcode Generator', description: 'Generate barcode images from text with download option.', category: 'Generator', keywords: ['barcode generator', 'barcode maker'] },
   { slug: 'csp-header-builder', name: 'CSP Header Builder', description: 'Build Content-Security-Policy headers with visual directive editor.', category: 'Generator', keywords: ['csp generator', 'content security policy builder'] },
+  { slug: 'markdown-table-generator', name: 'Markdown Table Generator', description: 'Build Markdown tables visually with alignment controls and instant output.', category: 'Generator', keywords: ['markdown table generator', 'md table maker'] },
+  { slug: 'json-schema-validator', name: 'JSON Schema Validator', description: 'Validate JSON data against a JSON Schema with detailed error reporting.', category: 'Tester', keywords: ['json schema validator', 'json schema check'] },
+  { slug: 'curl-to-code', name: 'cURL to Code', description: 'Convert cURL commands to JavaScript, Python, or PHP code.', category: 'Converter', keywords: ['curl to code', 'curl to python', 'curl to javascript'] },
 ]
 
 export function getToolBySlug(slug: string): ToolMeta | undefined {

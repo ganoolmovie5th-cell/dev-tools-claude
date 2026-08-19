@@ -99,6 +99,7 @@ export default function ToolPage({ params }: { params: { slug: string } }) {
           <span className="text-xs font-medium text-blue-600 uppercase tracking-wide">{tool.category}</span>
           <h1 className="text-2xl font-bold text-gray-900 dark:text-white mt-1">{tool.name}</h1>
           <p className="text-gray-500 dark:text-gray-400 mt-1">{tool.description}</p>
+          <p className="text-[10px] text-gray-400 dark:text-gray-600 mt-1">Last updated: August 2026</p>
         </div>
         <ToolPageClient slug={tool.slug} />
       </div>

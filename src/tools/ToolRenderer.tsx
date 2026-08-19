@@ -75,6 +75,9 @@ const toolComponents: Record<string, React.ComponentType> = {
   'typing-speed-test': dynamic(() => import('./TypingSpeedTest')),
   'barcode-generator': dynamic(() => import('./BarcodeGenerator')),
   'csp-header-builder': dynamic(() => import('./CspBuilder')),
+  'markdown-table-generator': dynamic(() => import('./MarkdownTableGenerator')),
+  'json-schema-validator': dynamic(() => import('./JsonSchemaValidator')),
+  'curl-to-code': dynamic(() => import('./CurlToCode')),
 }
 
 export default function ToolRenderer({ slug }: { slug: string }) {

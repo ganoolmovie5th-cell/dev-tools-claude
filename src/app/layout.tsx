@@ -7,6 +7,8 @@ import CommandPalette from '@/components/CommandPalette'
 import KeyboardHelp from '@/components/KeyboardHelp'
 import Onboarding from '@/components/Onboarding'
 import Confetti from '@/components/Confetti'
+import BackToTop from '@/components/BackToTop'
+import ScrollProgress from '@/components/ScrollProgress'
 import { ToastProvider } from '@/components/Toast'
 import { Analytics } from '@vercel/analytics/next'
 
@@ -64,6 +66,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <KeyboardHelp />
           <Onboarding />
           <Confetti />
+          <ScrollProgress />
+          <BackToTop />
           <main className="flex-1 max-w-6xl mx-auto w-full px-4 py-8">
             {children}
           </main>
