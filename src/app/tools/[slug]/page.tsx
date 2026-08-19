@@ -9,6 +9,7 @@ import EmbedWidget from '@/components/EmbedWidget'
 import ToolRating from '@/components/ToolRating'
 import Breadcrumb from '@/components/Breadcrumb'
 import AutoFocus from '@/components/AutoFocus'
+import ShareButtons from '@/components/ShareButtons'
 
 export function generateStaticParams() {
   return tools.map(t => ({ slug: t.slug }))
@@ -79,6 +80,18 @@ export default function ToolPage({ params }: { params: { slug: string } }) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }}
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({
+          '@context': 'https://schema.org',
+          '@type': 'BreadcrumbList',
+          itemListElement: [
+            { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.devkit.web.id/' },
+            { '@type': 'ListItem', position: 2, name: 'Tools', item: 'https://www.devkit.web.id/' },
+            { '@type': 'ListItem', position: 3, name: tool.name, item: `https://www.devkit.web.id/tools/${tool.slug}/` },
+          ],
+        }) }}
+      />
       <Breadcrumb items={[{ label: 'Tools', href: '/' }, { label: tool.name }]} />
       <AutoFocus />
       <div className="mb-6 flex items-start justify-between">
@@ -90,6 +103,7 @@ export default function ToolPage({ params }: { params: { slug: string } }) {
         <ToolPageClient slug={tool.slug} />
       </div>
       <ToolRenderer slug={tool.slug} />
+      <ShareButtons title={tool.name} slug={tool.slug} />
       <OutputHistory toolSlug={tool.slug} />
       <ToolRating slug={tool.slug} />
       <EmbedWidget slug={tool.slug} name={tool.name} />

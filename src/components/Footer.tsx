@@ -19,6 +19,10 @@ export default function Footer() {
             <Link href="/about" className="hover:text-gray-700 dark:hover:text-gray-200">About</Link>
           </div>
         </div>
+        <p className="mt-4 text-xs text-gray-400 dark:text-gray-600">
+          Built with Next.js + Tailwind CSS. Open source on{' '}
+          <a href="https://github.com/ganoolmovie5th-cell/devkit-claude" target="_blank" rel="noopener noreferrer" className="hover:text-gray-600 dark:hover:text-gray-400 underline">GitHub</a>.
+        </p>
       </div>
     </footer>
   )
